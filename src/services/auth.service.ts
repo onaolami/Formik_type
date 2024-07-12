@@ -6,6 +6,7 @@ class AuthService {
   login(data: ILoginRequest): Promise<AxiosResponse<ILoginResponse>> {
     return apiInstance.post("/auth/login", data);
   }
+  
 }
 
 const authService = new AuthService();

@@ -7,6 +7,7 @@ const Homepage = () => {
       <p>
         <Link to="/login">Login</Link>
       </p>
+      <p><Link to="/Addproduct">AddProduct</Link></p>
       <h1>Homepage</h1>
     </div>
   );
