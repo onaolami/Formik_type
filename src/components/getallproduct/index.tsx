@@ -4,17 +4,17 @@ import productService from "../../services/product.service";
 import { Link } from "react-router-dom";
 
 const GetAllProduct = () => {
- 
-  const [products,setProducts]= useState<IProduct[]>([]);
-   useEffect (()=>{
-     productService.getAllProducts().then((response)=>{
+  const [products, setProducts] = useState<IProduct[]>([]);
+  useEffect(() => {
+    productService
+      .getAllProducts()
+      .then((response) => {
         setProducts(response.data.products);
-     })
-     .catch((error)=>{
-      console.log(error);
-      
-     });
-   },[])
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
   return (
     <div>
@@ -32,7 +32,9 @@ const GetAllProduct = () => {
           {products.map((product) => (
             <tr key={product.id}>
               <td>{product.id}</td>
-              <td><Link to={`/product/${product.id}`}>{product.title}</Link></td>
+              <td>
+                <Link to={`/product/${product.id}`}>{product.title}</Link>
+              </td>
               <td>{product.description}</td>
               <td>{product.category}</td>
               <td>{product.price}</td>

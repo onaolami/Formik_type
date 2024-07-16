@@ -5,7 +5,7 @@ import LoginPage from "../pages/login";
 import AddProductPage from "../pages/Addproduct";
 import ProductPage from "../pages/productpage";
 import SearchProducts from "../pages/searchproducts";
-import AddRecipePage from "../pages/addrecipepage";
+import RecipePage from "../pages/recipepage";
 
 const RootNavigation = () => {
   return (
@@ -16,7 +16,7 @@ const RootNavigation = () => {
         <Route path="Addproduct" element={<AddProductPage />} />
         <Route path="product/:id" element={<ProductPage />} />
         <Route path="search" element={<SearchProducts />} />
-        <Route path="Addrecipe" element={<AddRecipePage />} />
+        <Route path="recipe" element={<RecipePage />} />
       </Routes>
     </BrowserRouter>
   );

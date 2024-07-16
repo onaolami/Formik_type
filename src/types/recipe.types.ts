@@ -1,5 +1,4 @@
 export interface IRecipe {
-  map(arg0: (recipe: any) => any): import("react").ReactNode;
   id: number;
   name: string;
   ingredients: string[];

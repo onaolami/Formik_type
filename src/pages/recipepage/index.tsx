@@ -1,7 +1,7 @@
 import GetAllRecipe from "../../components/getallrecipe";
 
 
-const AddRecipePage = ()=>{
+const RecipePage = ()=>{
     return(
         <div>
           <GetAllRecipe/>
@@ -9,4 +9,4 @@ const AddRecipePage = ()=>{
     )
 }
 
-export default AddRecipePage;
+export default RecipePage;

@@ -3,7 +3,7 @@ import apiInstance from "./apiInstance.service";
 import { IRecipe } from "../types/recipe.types";
 
 class RecipeService {
-  getAllRecipe(): Promise<AxiosResponse<IRecipe[]>> {
+  getAllRecipe(): Promise<AxiosResponse<{recipes:IRecipe[]}>> {
     return apiInstance.get("/recipes");
   }
 }
